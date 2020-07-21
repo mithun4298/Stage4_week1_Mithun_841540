@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cognizant.springlearn.Country;
 import com.cognizant.springlearn.SpringLearnApplication;
 import com.cognizant.springlearn.service.CountryService;
+import com.cognizant.springlearn.service.exception.CountryNotFoundException;
 
 @RestController
 public class CountryController {
@@ -32,9 +33,10 @@ public class CountryController {
 		return array;
 	}
 	@GetMapping("/countries/{code}")
-	public Country getCountry(@PathVariable("code") String code) {
+	public Country getCountry(@PathVariable("code") String code) throws CountryNotFoundException {
 		CountryService cs = new CountryService();
-	Country	c=cs.getCountry(code);
+	Country c = null;
+	c = cs.getCountry(code);
 		return c;
 		
 	}

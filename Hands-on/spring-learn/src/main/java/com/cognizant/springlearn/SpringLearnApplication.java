@@ -61,8 +61,6 @@ public static void displayCountries() {
 	for (Country country : array) {
 		LOGGER.debug("Country: {}", country.toString());
 	}
-	
-	
 	LOGGER.info("Ending of  display countries method: ");
 }
 

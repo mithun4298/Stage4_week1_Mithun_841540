@@ -12,7 +12,7 @@ import com.cognizant.springlearn.service.exception.CountryNotFoundException;
 @Service
 public class CountryService {
 
-	public Country getCountry(String Code)   {
+	public Country getCountry(String Code) throws CountryNotFoundException   {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("country.xml");
 		ArrayList<Country> countires = context.getBean("countryList", java.util.ArrayList.class);
@@ -20,11 +20,8 @@ public class CountryService {
 		for (Country country : countires) {
 			if (country.getCode().equalsIgnoreCase(Code))
 				return country;
-			/*
-			 * else new CountryNotFoundException()
-			 */;
-		}
-		;
+			throw new CountryNotFoundException();
+		};
 		return null;
 
 	}
