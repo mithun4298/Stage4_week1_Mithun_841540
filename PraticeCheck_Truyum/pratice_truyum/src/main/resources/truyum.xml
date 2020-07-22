@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+    <bean id="menu1" class="com.cognizant.mithun.pratice_truyum.model.MenuItem">  
+        <property name="id" value="501"/>
+        <property name="name" value="chola kulcha"/>
+        <property name="price" value="185.00"/>
+        <property name="active" value="1"/>
+        <property name="dateOfLaunch" value="09/12/2019"/>
+        <property name="category" value="lumch"/>
+        <property name="freeDelivery" value="0"></property>
+    </bean>
+    
+    <bean id="menu2" class="com.cognizant.mithun.pratice_truyum.model.MenuItem">  
+        <property name="id" value="502"/>
+        <property name="name" value="Masala Dhosa"/>
+        <property name="price" value="125.00"/>
+        <property name="active" value="1"/>
+        <property name="dateOfLaunch" value="03/02/2014"/>
+        <property name="category" value="Breakfast"/>
+        <property name="freeDelivery" value="1"></property>
+    </bean>
+    
+    <bean id="menu3" class="com.cognizant.mithun.pratice_truyum.model.MenuItem">  
+        <property name="id" value="503"/>
+        <property name="name" value="Rajma rice"/>
+        <property name="price" value="150.00"/>
+        <property name="active" value="1"/>
+        <property name="dateOfLaunch" value="01/03/2018"/>
+        <property name="category" value="Main course"/>
+        <property name="freeDelivery" value="0"></property>
+    </bean>
+    
+    <bean id="menuList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="menu1"></ref>
+                <ref bean="menu2"></ref>
+                <ref bean="menu3"></ref>
+            </list>
+        </constructor-arg>
+    </bean>
+    
+</beans>
