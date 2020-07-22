@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="employee1" class="com.cognizant.springlearn.Employee">  
+        <property name="id" value="841540"/>
+        <property name="name" value="Mithun Kumar"/>
+        <property name="salary" value="44000"/>
+        <property name="date_joining" value="12/11/2019"/>
+        <property name="employee_type" value="employee_type"/>
+        <property name="dateOfBirth" value="04/02/1998"/>
+    </bean>
+    
+    <bean id="employee2" class="com.cognizant.springlearn.Employee">  
+        <property name="id" value="841541"/>
+        <property name="name" value="Priya Patel"/>
+        <property name="salary" value="27000"/>
+        <property name="date_joining" value="12/01/2020"/>
+        <property name="employee_type" value="intern"/>
+        <property name="dateOfBirth" value="06/04/1998"/>
+    </bean>
+    
+    <bean id="employee3" class="com.cognizant.springlearn.Employee">  
+        <property name="id" value="841542"/>
+        <property name="name" value="Sonu Gupta"/>
+        <property name="salary" value="55000"/>
+         <property name="date_joining" value="12/11/2019"/>
+        <property name="employee_type" value="full time"/>
+        <property name="dateOfBirth" value="15/12/1995"/>
+    </bean>
+    
+    <bean id="employee4" class="com.cognizant.springlearn.Employee">  
+        <property name="id" value="841543"/>
+        <property name="name" value="rakesh purty"/>
+        <property name="salary" value="78000"/>
+         <property name="date_joining" value="12/12/2013"/>
+        <property name="employee_type" value="permanent"/>
+        <property name="dateOfBirth" value="25/08/1991"/>
+    </bean>
+    
+    <bean id="employee5" class="com.cognizant.springlearn.Employee">  
+        <property name="id" value="841547"/>
+        <property name="name" value="RAhul patidar"/>
+        <property name="salary" value="34000"/>
+         <property name="date_joining" value="12/10/2011"/>
+        <property name="employee_type" value="intern"/>
+        <property name="dateOfBirth" value="13/06/1985"/>
+    </bean>
+    
+    <bean id="employeeList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="employee1"></ref>
+                <ref bean="employee2"></ref>
+                <ref bean="employee3"></ref>
+                <ref bean="employee4"></ref>
+                <ref bean="employee5"></ref>
+            </list>
+        </constructor-arg>
+    </bean>
+    
+    
+</beans>
