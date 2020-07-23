@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+    <bean id="movie1" class="com.mithun.cognizant.MovieCruiser.model.movie">  
+        <property name="id" value="1"/>
+        <property name="title" value="Krrish 3"/>
+        <property name="boxOffice" value="PVR"/>
+        <property name="active" value="1"/>
+        <property name="dateOfLaunch" value="09/01/2013"/>
+        <property name="genre" value="Science fiction"/>
+        <property name="hasTeaser" value="1"/>
+        <property name="posterLink" value="https://upload.wikimedia.org/wikipedia/en/8/82/Krrish_3_poster.jpg"/>
+   </bean>
+    
+    <bean id="movie2" class="com.mithun.cognizant.MovieCruiser.model.movie">  
+        <property name="id" value="2"/>
+        <property name="title" value="Ra.One"/>
+        <property name="boxOffice" value="INOX"/>
+        <property name="active" value="1"/>
+        <property name="dateOfLaunch" value="10/14/2011"/>
+        <property name="genre" value="superhero"/>
+        <property name="hasTeaser" value="1"/>
+        <property name="posterLink" value="https://upload.wikimedia.org/wikipedia/en/5/58/Ra.Oneposter.jpg"/>
+    </bean>
+    
+    
+     <bean id="movie3" class="com.mithun.cognizant.MovieCruiser.model.movie">  
+        <property name="id" value="2"/>
+        <property name="title" value="Qismat"/>
+        <property name="boxOffice" value="INOX"/>
+        <property name="active" value="1"/>
+        <property name="dateOfLaunch" value="09/21/2018"/>
+        <property name="genre" value="Romance"/>
+        <property name="hasTeaser" value="1"/>
+        <property name="posterLink" value="https://upload.wikimedia.org/wikipedia/en/c/c4/Qismat.jpg"/>
+    </bean>
+    
+     <bean id="movie4" class="com.mithun.cognizant.MovieCruiser.model.movie">  
+        <property name="id" value="2"/>
+        <property name="title" value="Avengers: Infinity War"/>
+        <property name="boxOffice" value="INOX"/>
+        <property name="active" value="1"/>
+        <property name="dateOfLaunch" value="04/23/2018"/>
+        <property name="genre" value="Adventure"/>
+        <property name="hasTeaser" value="1"/>
+        <property name="posterLink" value="https://upload.wikimedia.org/wikipedia/en/4/4d/Avengers_Infinity_War_poster.jpg"/>
+    </bean>
+    
+     <bean id="movie5" class="com.mithun.cognizant.MovieCruiser.model.movie">  
+        <property name="id" value="2"/>
+        <property name="title" value="Mom"/>
+        <property name="boxOffice" value="INOX"/>
+        <property name="active" value="1"/>
+        <property name="dateOfLaunch" value="07/07/2017"/>
+        <property name="genre" value="Thriller"/>
+        <property name="hasTeaser" value="1"/>
+        <property name="posterLink" value="https://upload.wikimedia.org/wikipedia/en/1/1d/Mom_film_poster.jpg"/>
+    </bean>
+    <bean id="movie6" class="com.mithun.cognizant.MovieCruiser.model.movie">  
+        <property name="id" value="2"/>
+        <property name="title" value="Singham"/>
+        <property name="boxOffice" value="INOX"/>
+        <property name="active" value="1"/>
+        <property name="dateOfLaunch" value="09/25/2015"/>
+        <property name="genre" value="Action"/>
+        <property name="hasTeaser" value="1"/>
+        <property name="posterLink" value="https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/Singham_%282011_Hindi_film%29_Theatrical_poster.jpg/220px-Singham_%282011_Hindi_film%29_Theatrical_poster.jpg"/>
+    </bean>
+    <bean id="movieList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="movie1"></ref>
+                <ref bean="movie2"></ref>
+                <ref bean="movie3"></ref>
+                <ref bean="movie4"></ref>
+                <ref bean="movie5"></ref>
+                <ref bean="movie6"></ref>
+            </list>
+        </constructor-arg>
+    </bean>
+    
+</beans>
